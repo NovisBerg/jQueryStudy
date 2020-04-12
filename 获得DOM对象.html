@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM元素</title>
+</head>
+<body>
+<h2>DOM元素</h2>
+<p id="foo">Foo</p>
+<p id="bar">Bar</p>
+</body>
+<script>
+    // 获取文档中id为foo的元素
+    var foo = document.getElementById('foo')
+    // 将元素的HTML内容修改为Foo DOM
+    foo.innerHTML = 'Foo DOM'
+
+    // 获取文档中标签名称为p的所有元素
+    var items = document.getElementsByTagName('p')
+    // 向控制台输出元素数组的个数
+    console.log(items.length)
+    // 遍历数组的元素
+    for (var i=0; i<items.length; i++) {
+        // 将每个元素的HTML内容增加DOM字符
+        items[i].innerHTML += 'DOM'
+    }
+</script>
+
+</html>

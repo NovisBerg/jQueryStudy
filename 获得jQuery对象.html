@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery对象</title>
+</head>
+<body>
+<h2>jQuery对象</h2>
+<p id="foo">Foo</p>
+<p id="bar">Bar</p>
+</body>
+<script type="text/javascript" src="./public/jquery-3.5.0.js"></script>
+<script type="text/javascript">
+    // 从文档中获得id为foo的jQuery对象
+    var $foo = $('#foo')
+    // 修改$foo元素的HTML内容为Foo jQuery
+    $foo.html('Foo jQuery')
+
+    // 获得页面中所有的p标签元素
+    var $items = $('p')
+    // 从控制台输出元素个数
+    console.log($items.html())
+    // 遍历并修改元素的HTML内容
+    $items.html($items.html() + 'jQuery')
+
+</script>
+</html>

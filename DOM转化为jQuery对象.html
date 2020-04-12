@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM转化为jQuery对象</title>
+</head>
+<body>
+<h2>DOM转换成jQuery对象</h2>
+<p id="foo">Foo</p>
+<p id="bar">Bar</p>
+</body>
+<script type="text/javascript" src="./public/jquery-3.5.0.js"></script>
+<script type="text/javascript">
+    // 方法一
+    // 在文档中获得id为foo的DOM对象
+    var foo = document.getElementById('foo')
+    // 将DOM对象转换成jQuery对象
+    var $foo1 = jQuery(foo)
+    var $foo2 = $(foo)
+    // 调用jQuery对象中的方法
+    $foo1.html('Foo jQuery')
+    $foo2.css('color', 'red')
+
+    // 方法二
+    // 获得文档中id为bar的DOM对象，将DOM包装成一个jQuery对象，调用jQuery方法html修改元素HTML
+    jQuery('#bar').html('Bar jQuery')
+    // 为id为bar的元素设置样式，将前景色修改为蓝色
+    $('#bar').css('color', 'blue')
+</script>
+</html>
