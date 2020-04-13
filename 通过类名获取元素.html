@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="myclass">div class="notMe"</div>
+<div class="myclass otherclass">div class="myClass"</div>
+<span class="myclass otherclass">span class="myClass"</span>
+</body>
+<script src="./public/jquery-3.5.0.js"></script>
+<script>
+    $('.myclass.otherclass').css('border', '13px solid red')
+</script>
+</html>
