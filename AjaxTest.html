@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="results">
+
+</div>
+</body>
+<script src="./public/jquery-3.5.0.js"></script>
+<script>
+    // 加载并执行一个JS文件
+    // $.ajax({
+    //     type: 'GET',
+    //     url: './public/test.js',
+    //     dataType: 'script'
+    // })
+
+    // 保存数据到服务器，成功时显示信息
+    // $.ajax({
+    //     type: 'POST',
+    //     url: 'http://localhost/jQueryAJAXTest/insert.php',
+    //     data: 'name=John&location=Boston',
+    //     success: function (msg) {
+    //         alert('Data saved: ' + msg)
+    //     },
+    //     error(msg) {
+    //         console.log(msg)
+    //     }
+    // })
+
+    // 装入一个HTML网页最新版本
+    $.ajax({
+        url: './public/test.html',
+        cache: false,
+        success: function (html) {
+            $('#results').append(html)
+        }
+    })
+</script>
+</html>
